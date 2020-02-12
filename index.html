@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/init.css"/>
+    <title>JavaScript</title>    
+  </head>
+  <body>
+    <main class="container">
+      <header class="cabecera">
+        <h1 class="cabecera__title">JavaScript</h1>
+      </header>
+      <div class="contenido">
+        <article class="contenido__item">
+          <header class="subcabecera">
+            <h2 class="subcabecera__title">Variable evt</h2>
+            Forma de capturar el <strong>evento</strong> de un elemento con <strong>JavaScript</strong>:
+<pre>
+document.addEventListener("click",evt=>{
+  
+});
+</pre>
+          </header>
+          <div>
+            La <strong>variable evt</strong> al ser mostrada en la consola tiene varias propiedades llamadas:
+            <ol class="listado">
+                <li>target
+                  <p><strong>El "punto" que recibe el ratón (el click es un evento de "click")</strong>, por tanto hace referencia al elemento objeto sobre el cuál ha se ha asignado el evento.</p>
+                </li>
+                <li>currentTarget
+                  <p><strong>El elemento del que parte el evento</strong>, siempre se refiere al elemento del <strong>event Handler</strong> (Manejador de Eventos) que ha sido atachado (adjuntado) a un <strong>event.target</strong> especifico, este identifica el elemento en el que se produjo el evento.</p>
+                </li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/relatedTarget">relatedTarget</a>
+                  <p>Read-only property is the secondary target for the mouse event, if there is one</p>
+                </li>
+            </ol>
+            <figure>
+              <img src="./images/target.png" alt="">
+            </figure>
+          </div>
+        </article>
+        <article class="contenido__item">
+          <header class="subcabecera">
+            <h2 class="subcabecera__title">Funciones</h2>
+            <div class="listado">
+              <fieldset class="decripcion">
+                <legend class="decripcion__legend">Funciones  J5</legend>
+                <p class="decripcion__p">Con el título de esta leyenda ya podemos intuir que existen dos formas de generar funciones en JavaScript.</p>
+                <section>
+                  <h3>Definición</h3>
+                  <p class="decripcion__p">Una <strong>función</strong> es un procedimiento en JavaScript, es decir, un conjunto de sentencias que realizan una tarea o calculan un valor. Para usar una función, debe <strong>definirla</strong> en algún lugar del ámbito desde el cual desea llamarla.</p>
+                  <h3>Sintaxis</h3><code>function miFuncion(parametro1, parametro2){//bloque de sentecias;[return valor;]}</code>
+                </section>
+              </fieldset>
+              <fieldset class="ejercicios">
+                <legend class="ejercicios_legend">Ejercicio 1</legend>
+                <ol class="ejercicio">
+                  <li class="ejercicio__item">Al pulsar el botón "Números Pares" deberá mostrarse los 100 primeros números pares. Requeisitos
+                    <ul class="listado">
+                      <li>Crear una función esPar(numero) en que se deberá devolver un valor booleano. Retornará (return) el valor de verdadero (true) si el número pasado como parámetro es par y falso (false) si es impar<br>Se puede utilizar una función anónima: <code>var varible=function(parametro){//bloque de sentecias; return valor;}</code></li>
+                      <li>Definir una constante (const) para asignarle (=) el valor de 100</li>
+                      <li>
+                        <button class="boton" id="b1">Números Pares				</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+              </fieldset>
+            </div>
+          </header>
+        </article>
+        <article class="contenido__item">
+          <header class="subcabecera">
+            <h2 class="subcabecera__title">Funciones</h2>
+            <div class="listado">
+              <fieldset class="decripcion">
+                <legend class="decripcion__legend">Funciones  J6+</legend>
+                <section>
+                  <h3>Nueva Sintaxis</h3>
+                  <p class="decripcion__p">A partir de J6 en adelante surge una nueva sintaxis para definir las <strong>funciones anónimas</strong> que retornan un valor. Ahora se utilizar el operador flecha o arrow (=>)</p>
+                  <h3>Sintaxis</h3><code>let varible=(parametro1, parametro2)=>{//bloque de sentecias; return valor;}</code>
+                </section>
+              </fieldset>
+              <fieldset class="ejercicios">
+                <legend class="ejercicios_legend">Ejercicio 2</legend>
+                <ol class="ejercicio">
+                  <li class="ejercicio__item">Calcular el factorial de un número
+                    <ul class="listado">
+                      <li>Ordinograma de un programa que calcule el factorial de un número. El factorial de un entero positivo se define como el producto de todos los números enteros positivos desde 1 (es decir, los números naturales) hasta n. <br> Por ejemplo el factorias de 4 sería 4*3*2*1=24</li>
+                      <li>Crear una función con el nuevo método de definir funciones que compruebe que el número introducido en el campo de texto se trate realmente de un número</li>
+                      <li>
+                        <label for="f">Factorial</label>
+                        <input id="f" type="text"/>
+                        <button class="boton" id="b2">Calcular</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+              </fieldset>
+              <fieldset class="ejercicios">
+                <legend class="ejercicios_legend">Ejercicio 3</legend>
+                <ol class="ejercicio">
+                  <li class="ejercicio__item">Mayor de Edad
+                    <ul class="listado">
+                      <li>Programa que solicite una edad (máximo tres dígitos). </li>
+                      <li>Solicite un nombre. No se admiten números</li>
+                      <li>Verificar posibles errores</li>
+                      <li>Saque finalmente un mensaje que diga si la persona es mayor o menor de edad</li>
+                      <li>
+                        <label class="bloque" for="nombre">Nombre</label>
+                        <input id="nombre" type="text"/>
+                        <label class="bloque">Edad</label>
+                        <input id="edad" type="text"/>
+                        <button class="boton" id="b3">Verificar</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+              </fieldset>
+              <fieldset class="ejercicios">
+                <legend class="ejercicios_legend">Ejercicio 4</legend>
+                <ol class="ejercicio">
+                  <li class="ejercicio__item">Conversiones
+                    <ul class="listado">
+                      <li>Al pulsar el botón Calcular deberemos crear variable llamada kelvin y le asignaremos el valor de 294. No cambiaremos nunca este valor. Elige el tipo de variable que mejor se adapte a estas características.</li>
+                      <li>Escribe un comentario que explique el código que has tenido que escribir.</li>
+                      <li>Celsius es similar a Kelvin. La direfencia es que es 273 grados menor que kelvil. Crea una variable llamada celsius y asígnale el valor restándole a la variable kelvin el valor de 273.</li>
+                      <li>Crearemos otra variable "fahrenheit" y le asignaremos el valor correspondiente a partir de las siguiente fórmula:<div>Fahrenheit = Celsius * (9/5) + 32</div></li>
+                      <li>Cuando convierte Celsius a Fahrenheit, muchas veces optiones un número decimal. Utiliza el método <code>.floor()</code> de la librería Math para redondear la temperatura the Fahrenheit. Asigna el resultado a la variable fahrenheit.</li>
+                      <li>Muestra todos los resultados</li>
+                      <li>Modifica el programa para que la constante kelvin pueda cargarse por la función prompt y podamos ver resultados diferentes</li>
+                      <li>Mostrar los resultados con window.open</li>
+                      <li>
+                        <button class="boton" id="b4">Calcular</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+              </fieldset>
+            </div>
+          </header>
+        </article>
+      </div>
+    </main>
+    <script src="js/funciones.js"></script>
+  </body>
+</html>
